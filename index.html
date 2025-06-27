@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Site do Cawê 💙</title>
+  <style>
+    body {
+      background: url('MCG56 GIF.gif') no-repeat center center fixed;
+      background-size: cover;
+      color: #000080;
+      font-family: Comic Sans MS, cursive;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .caixa {
+      background-color: #ffffffdd;
+      width: 80%;
+      max-width: 800px;
+      margin: 40px auto;
+      border: 5px dotted #0000ff;
+      padding: 20px;
+      box-shadow: 0 0 20px #00f;
+    }
+
+    h1 {
+      color: #0000ff;
+      text-shadow: 2px 2px #00ccff;
+      font-size: 40px;
+    }
+
+    h2 {
+      color: #ff33cc;
+      border-bottom: 2px dashed #00f;
+      padding-bottom: 5px;
+    }
+
+    .blink {
+      animation: blink 1s infinite;
+      color: red;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    a {
+      color: #0000ee;
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #000;
+      font-weight: bold;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li::before {
+      content: "💙 ";
+    }
+
+    img.projeto {
+      margin-top: 10px;
+      width: 150px;
+    }
+
+    #goat-img {
+      margin-top: 15px;
+      max-width: 100%;
+      border: 3px dashed #0000ff;
+      box-shadow: 0 0 10px #00f;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 8px 12px;
+      background-color: #0059b3;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="caixa">
+    <h1>🌐 Bem-vindo ao site do Cawê 💙</h1>
+    <p><span class="blink">Você é o visitante nº 000001 🧑‍💻</span></p>
+
+    <h2>Quem sou eu?</h2>
+    <p>Meu nome é <b>Cawê</b>, tenho 18 anos e sou estudante de <b>Ciências da Computação</b> na <b>UNIFAL-MG</b> (Alfenas).</p>
+
+    <h2>💙 Meus interesses</h2>
+    <ul>
+      <li>Cabras 🐐</li>
+      <li>Jogos 🎮</li>
+      <li>Bonecos de biscuit 🎨</li>
+      <li>Cor azul 💙</li>
+    </ul>
+
+    <h2>📂 Meus projetos</h2>
+    <p>Veja no meu <a href="https://github.com/CaweReis236" target="_blank">GitHub</a>.</p>
+
+    <h2>🐐 Cabra aleatória</h2>
+    <img id="goat-img" src="" alt="Imagem aleatória de cabra" />
+    <br>
+    <button onclick="mostrarCabra()">Mostrar outra cabra</button>
+
+    
+  </div>
+
+  <footer>
+    &copy; 2025 - Site do Cawê 😎 | Powered by cabras & HTML retrô
+  </footer>
+
+  <script>
+    const imagensCabras = [
+      'rand-images/cabra1.jpg',
+      'rand-images/cabra2.jpg',
+      'rand-images/cabra3.jpg',
+      'rand-images/cabra4.jpg',
+      'rand-images/cabra5.jpg',
+      'rand-images/cabra6.jpg',
+      'rand-images/cabra7.jpg',
+      
+      
+    ];
+
+    function mostrarCabra() {
+      const img = document.getElementById('goat-img');
+      const i = Math.floor(Math.random() * imagensCabras.length);
+      img.src = imagensCabras[i];
+    }
+
+    // Exibe uma cabra logo que o site carrega
+    mostrarCabra();
+  </script>
+
+</body>
+</html>
+
